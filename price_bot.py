@@ -32,6 +32,7 @@ async def get_list(message: types.Message):
         await message.reply('Посилання невірне, спробуй ще.')
     ready_list = priceParser.get_goods_list(message.text)
     format_list = ''
+    print('add reebok')
     for item in ready_list:
         format_list += (f"<b>Вартість:</b> {item['price_uah']} UAH\n<b>Країна:</b> {item['country']}\n<b>Посилання:</b> <a href='{item['url']}'>тут</a>\n\n")
     print(format_list)
